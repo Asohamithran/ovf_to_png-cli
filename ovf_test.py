@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from ovf import ovf 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -11,7 +12,7 @@ filename = "test.ovf"
 data = np.zeros(20,dtype='f')
 data[1] = 21
 import argparse as ap
-parser = ap.ArgumentParser(add_help =False)
+parser = ap.ArgumentParser(prog= 'ovf_to_png',add_help =False)
 parser.add_argument('-h', action ='help',
         help='this program creates a png file for the omf file passed as the argument')
 parser.add_argument('ovf_filename')
@@ -110,4 +111,3 @@ dim='z'
     #print("eof error encountered")
 func2(filename,dim)
 #func3(filename2)
-    

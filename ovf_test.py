@@ -2,15 +2,6 @@
 from ovf import ovf 
 import matplotlib.pyplot as plt
 import numpy as np
-#read all the segments properly
-#no need to give the length of the header 
-#plot for all different length of data
-filename = "test.ovf"
-# configure to your taste to see what do the indices mean 
-# segment has the information about the number of cells
-# first read the segment head and then read data from the segment
-data = np.zeros(20,dtype='f')
-data[1] = 21
 import argparse as ap
 parser = ap.ArgumentParser(prog= 'ovf_to_png',add_help =False)
 parser.add_argument('-h', action ='help',

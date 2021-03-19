@@ -10,33 +10,6 @@ parser.add_argument('ovf_filename')
 args = parser.parse_args()
 filename=(args.ovf_filename)
 
-#I have added this line now and its new
-#def func1(filename):
-    #with ovf.ovf_file(filename) as ovf_file:
-        #segment =ovf.ovf_segment(n_cells=[20,0,0],comment="cells are added")
-        #ovf_file.write_segment(segment, data)
-        #print(ovf_file.n_segments)
-        #print(segment.n_cells[0],segment.n_cells[1],segment.n_cells[2])
-    ## reading the ovf file
-    #with ovf.ovf_file(filename) as ovf_file:
-        #rec_data=np.zeros(data.shape,dtype='f')
-        #ovf_file.read_segment_header(0,segment)
-        #ovf_file.read_segment_data(0,segment,rec_data)
-        #print(type(segment))
-        #print(rec_data)
-        #return
-#def func3(filename2):
-    #with ovf.ovf_file(filename2) as ovf_file:
-        #some_segment=ovf.ovf_segment()
-        #n = ovf_file.n_segments
-        #ovf_file.read_segment_header(1,some_segment)
-        #print("the number of segments are ",n)
-        #data_shape= (some_segment.n_cells[0],some_segment.n_cells[1],
-                    #some_segment.n_cells[2],3) 
-        #print(data_shape)
-        #record_data = np.zeros(data_shape,dtype='f')
-        #ovf_file.read_segment_data(1,some_segment,record_data)
-        #return
 # read the ovf file 
 def get_mag(x_flat,y_flat):
     mag= np.empty_like(x_flat)
@@ -88,18 +61,8 @@ def func2(filename,dim):
 
 #
             visualise(record_data,i)
-            #if (dim =='x'or dim =='X'):
-                #print("spin_x",record_data[:,:,:,0])
-            #elif (dim =='y'or dim =='Y'):
-                #print("spin_y",record_data[:,:,:,1])
-            #elif (dim =='z'or dim =='Z'):
-                #print ("spin_y",record_data[:,:,:,2])
         return
 
 dim='z'
-#try:
-    #dim =input("enter the dimension x or y or z")
-#except EOFError:
-    #print("eof error encountered")
 func2(filename,dim)
 #func3(filename2)

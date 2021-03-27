@@ -33,7 +33,7 @@ def visualise(image_data,index):
     #print(mag.shape)
     plt.contourf(U,V,mag)
     #plt.quiver(U,V,u,v)
-    plt.quiver(U,V,u_flat,v_flat)
+    plt.quiver(U,V,u_flat,v_flat,angles='xy',scale_units='xy')
     plt.title(f'spin_x/spin_y:{np.round(np.max(mag),2)}to{np.round(np.min(mag),2)}')
     plt.xlabel('x_nodes')
     plt.ylabel('y_nodes')

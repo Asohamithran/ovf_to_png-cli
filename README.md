@@ -5,6 +5,11 @@
 ovf parser library for spirit code: https://github.com/spirit-code/ovf
 # Usage:
 `python ovf_to_png.py file_name.ovf`
+## Show_plot flag:
+`-show_plot` flag opens each plot in a new window after saving the image
+
+`python ovf_to_png.py file_name.ovf -show_plot`
+
 # output .png images
 ![spin configuration](https://github.com/Asohamithran/ovf_to_png-cli/blob/main/spin%20data%20header-4.png)
 ![spin configuration](https://github.com/Asohamithran/ovf_to_png-cli/blob/main/spin%20data%20header-8.png)
